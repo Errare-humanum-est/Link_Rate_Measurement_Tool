@@ -1,0 +1,2445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Link_Rate</class>
+ <widget class="QMainWindow" name="Link_Rate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>1101</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>820</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Link_Rate</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_68">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_57">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_29">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_28">
+          <item>
+           <widget class="QCustomPlot" name="customPlot" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>700</width>
+              <height>420</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCustomPlot" name="customPlot2" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>300</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_56">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_53">
+            <item>
+             <widget class="QLabel" name="disp_min">
+              <property name="text">
+               <string>Min Bitrate (Mbit/s):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="min_set">
+              <property name="minimumSize">
+               <size>
+                <width>78</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_54">
+            <item>
+             <widget class="QLabel" name="disp_max">
+              <property name="text">
+               <string>Max Bitrate (Mbit/s):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="max_set">
+              <property name="minimumSize">
+               <size>
+                <width>78</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_55">
+            <item>
+             <widget class="QLabel" name="disp_avg">
+              <property name="text">
+               <string>Average Bitrate (Mbit/s):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="avg_set">
+              <property name="minimumSize">
+               <size>
+                <width>78</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_40">
+              <property name="text">
+               <string>Packets lost:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="pkt_loss">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>505</width>
+          <height>800</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>470</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Link Rate Measurement</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_43">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_42">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Server IP</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="Server_IP">
+                <property name="text">
+                 <string>129.187.223.200</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Check_Server_IP">
+              <property name="minimumSize">
+               <size>
+                <width>145</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Setup</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetFixedSize</enum>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_44">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetFixedSize</enum>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_41">
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>65</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="lineWidth">
+                     <number>1</number>
+                    </property>
+                    <property name="text">
+                     <string>Port</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="Server_Port">
+                    <property name="text">
+                     <string>3000</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QLabel" name="label_3">
+                    <property name="text">
+                     <string>Connection</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="connect_disp">
+                    <property name="text">
+                     <string>inactive</string>
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::AutoText</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="Console">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>1012</width>
+                <height>110</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetFixedSize</enum>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="wrap_arround">
+                <property name="text">
+                 <string>Wrap around  </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_25">
+                <property name="text">
+                 <string>UDP data size:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="udp_pkt_size">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>1500</number>
+                </property>
+                <property name="value">
+                 <number>100</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetFixedSize</enum>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>140</width>
+                  <height>27</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Samples</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="bottleneck_iteration">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>500</number>
+                </property>
+                <property name="singleStep">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="HP_MODE_en">
+                <property name="text">
+                 <string>HP Mode</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="Test_data">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>2 pkt bottleneck burst test</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>Samples</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string>Interval (ms)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <item>
+               <widget class="QSpinBox" name="tmr_iterations">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>10000</number>
+                </property>
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="tmr_interval">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>10000</number>
+                </property>
+                <property name="value">
+                 <number>100</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>2 pkt bottleneck interval test</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <item>
+                 <widget class="QLabel" name="label_24">
+                  <property name="text">
+                   <string>Aprx. t. proc.:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Processing_time">
+                  <property name="minimumSize">
+                   <size>
+                    <width>160</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>0.0.100  (min.sec.ms)</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Message:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Data">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Send">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>85</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Send</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <item>
+             <widget class="QTextEdit" name="recv_output">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="send_progress">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+         <zorder></zorder>
+         <zorder></zorder>
+         <zorder></zorder>
+         <zorder></zorder>
+         <zorder></zorder>
+         <zorder></zorder>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Graph Setup</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>1</y>
+            <width>499</width>
+            <height>364</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <layout class="QFormLayout" name="formLayout_2">
+               <property name="fieldGrowthPolicy">
+                <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+               </property>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Graph 1:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_30">
+                 <property name="text">
+                  <string>Update steps</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="Graph_refresh_rate">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>500</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_58">
+                 <item>
+                  <widget class="QLabel" name="label_38">
+                   <property name="text">
+                    <string>Hist res.:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="g1_histo_res">
+                   <property name="minimum">
+                    <number>0</number>
+                   </property>
+                   <property name="maximum">
+                    <number>4</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="Draw_bitrate">
+                 <property name="text">
+                  <string>Bitrate</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QRadioButton" name="draw_Hist">
+                 <property name="text">
+                  <string>Bitrate Histogram</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="Draw_diff">
+                 <property name="text">
+                  <string>Dispersion</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <item>
+              <widget class="QLabel" name="g1_setup">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bitrate</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="line_width">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_28">
+             <item>
+              <widget class="QLabel" name="g1_avg">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bitrate average</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_2">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_2">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_2">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="line_width_2">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_2">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_29">
+             <item>
+              <widget class="QLabel" name="g1_min">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bitrate minimum</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QLabel" name="label_15">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_3">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_3">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_3">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="line_width_3">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_3">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_30">
+             <item>
+              <widget class="QLabel" name="g1_max">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bitrate maximum</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_18">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <item>
+                  <widget class="QLabel" name="label_19">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_4">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_27">
+                 <item>
+                  <widget class="QLabel" name="label_21">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_4">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>3</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_17">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_26">
+                 <item>
+                  <widget class="QLabel" name="label_20">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_4">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QLabel" name="line_width_4">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_4">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>380</y>
+            <width>499</width>
+            <height>364</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_19">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <layout class="QFormLayout" name="formLayout_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Graph 2:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_31">
+                 <property name="text">
+                  <string>Update steps</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="Graph_refresh_rate_2">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>500</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_59">
+                 <item>
+                  <widget class="QLabel" name="label_39">
+                   <property name="text">
+                    <string>Hist res.:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="g2_histo_res">
+                   <property name="minimum">
+                    <number>0</number>
+                   </property>
+                   <property name="maximum">
+                    <number>4</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QFormLayout" name="formLayout_4">
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="Draw_bitrate_2">
+                 <property name="text">
+                  <string>Bitrate</string>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QRadioButton" name="draw_Hist_2">
+                 <property name="text">
+                  <string>Bitrate Histogram</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="Draw_diff_2">
+                 <property name="text">
+                  <string>Dispersion</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <widget class="QLabel" name="g1_setup_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bitrate Distribution</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_20">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_5">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>5</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_31">
+                 <item>
+                  <widget class="QLabel" name="label_18">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_5">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_32">
+                 <item>
+                  <widget class="QLabel" name="label_26">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_5">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                 <item>
+                  <widget class="QLabel" name="line_width_5">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_5">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_34">
+             <item>
+              <widget class="QLabel" name="g1_avg_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Not used</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_22">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                 <item>
+                  <widget class="QLabel" name="label_27">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_6">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_36">
+                 <item>
+                  <widget class="QLabel" name="label_28">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_6">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_23">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_37">
+                 <item>
+                  <widget class="QLabel" name="label_29">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_6">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_38">
+                 <item>
+                  <widget class="QLabel" name="line_width_6">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_6">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_39">
+             <item>
+              <widget class="QLabel" name="g1_min_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Distribution minimum</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_24">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_40">
+                 <item>
+                  <widget class="QLabel" name="label_32">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_7">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_45">
+                 <item>
+                  <widget class="QLabel" name="label_33">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_7">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_25">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_46">
+                 <item>
+                  <widget class="QLabel" name="label_34">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_7">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_47">
+                 <item>
+                  <widget class="QLabel" name="line_width_7">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_7">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_48">
+             <item>
+              <widget class="QLabel" name="g1_max_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Distribution maximum</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_26">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_49">
+                 <item>
+                  <widget class="QLabel" name="label_35">
+                   <property name="text">
+                    <string>Line Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Line_Style_8">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_50">
+                 <item>
+                  <widget class="QLabel" name="label_36">
+                   <property name="text">
+                    <string>Color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="color_sel_8">
+                   <property name="maximum">
+                    <number>5</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>3</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_27">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_51">
+                 <item>
+                  <widget class="QLabel" name="label_37">
+                   <property name="text">
+                    <string>Scatter Style</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Scatter_Style_8">
+                   <property name="maximum">
+                    <number>9</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_52">
+                 <item>
+                  <widget class="QLabel" name="line_width_8">
+                   <property name="text">
+                    <string>Line width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="width_sel_8">
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Server File Download</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>502</width>
+            <height>272</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_60">
+             <item>
+              <widget class="QLabel" name="label_42">
+               <property name="text">
+                <string>Command:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Text_Command">
+               <property name="text">
+                <string>TEXT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Text_Receive">
+               <property name="text">
+                <string>Receive Text</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="Received_text">
+             <property name="minimumSize">
+              <size>
+               <width>500</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>200</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_61">
+             <item>
+              <widget class="QLabel" name="label_41">
+               <property name="text">
+                <string>Number of packets received:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Text_pkt_nr">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Text_save">
+               <property name="text">
+                <string>Save Text (*.txt)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>280</y>
+            <width>501</width>
+            <height>134</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_32">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_66">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_62">
+               <item>
+                <widget class="QLineEdit" name="MP3_Command">
+                 <property name="text">
+                  <string>MUSIC 3653776</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="MP3_Receive">
+                 <property name="text">
+                  <string>Get mp3</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_65">
+               <item>
+                <widget class="QPushButton" name="Music_save">
+                 <property name="text">
+                  <string>Save File (*.mp3)</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_64">
+                 <item>
+                  <widget class="QLabel" name="label_46">
+                   <property name="text">
+                    <string>Save:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="Music_Save_suc">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_63">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_31">
+               <item>
+                <widget class="QCheckBox" name="Music_save_logfile">
+                 <property name="text">
+                  <string>Save log file</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_43">
+                 <property name="text">
+                  <string>Number of packets received:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_44">
+                 <property name="text">
+                  <string>Number of packets lost:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_45">
+                 <property name="text">
+                  <string>Fatal error caused by crosstraffic:</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_30">
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="Music_pkt_nr">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Music_pkt_lost">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Music_cross_error">
+                 <property name="text">
+                  <string>NO</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>420</y>
+            <width>519</width>
+            <height>194</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_34">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_67">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_43">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_78">
+                 <item>
+                  <widget class="QLineEdit" name="Video_Command">
+                   <property name="text">
+                    <string>VIDEO 3653776</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="Video_Receive">
+                   <property name="text">
+                    <string>Get Video</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_79">
+                 <item>
+                  <widget class="QLabel" name="label_61">
+                   <property name="text">
+                    <string>Retansmit Timeout (ms):</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="Video_retrans_tmout">
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>2000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>50</number>
+                   </property>
+                   <property name="value">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_33">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_77">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_42">
+                   <item>
+                    <widget class="QPushButton" name="Video_save">
+                     <property name="text">
+                      <string>Save File -retrans</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="Video_save_2">
+                     <property name="text">
+                      <string>Save File +retrans</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_39">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_80">
+                     <item>
+                      <widget class="QLabel" name="label_55">
+                       <property name="text">
+                        <string>Save:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="Video_Save_suc">
+                       <property name="minimumSize">
+                        <size>
+                         <width>80</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_83">
+                     <item>
+                      <widget class="QLabel" name="label_59">
+                       <property name="text">
+                        <string>Save:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="Video_Save_suc_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>80</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="Video_save_logfile">
+                 <property name="text">
+                  <string>Save log file</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_81">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_41">
+               <item>
+                <widget class="QLabel" name="label_56">
+                 <property name="text">
+                  <string>Number of packets received:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_57">
+                 <property name="text">
+                  <string>Number of packets lost:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_60">
+                 <property name="text">
+                  <string>Number Packet retransmitted:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_58">
+                 <property name="text">
+                  <string>Fatal error caused by crosstraffic:</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_40">
+               <item>
+                <widget class="QLabel" name="Video_pkt_nr">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Video_pkt_lost">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Video_pkt_retr">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="Video_cross_error">
+                 <property name="text">
+                  <string>NO</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLink_Rate_Measurement">
+    <property name="title">
+     <string>Link Rate Measurement</string>
+    </property>
+    <addaction name="action_c_Nicolai_Oswald_2014"/>
+   </widget>
+   <addaction name="menuLink_Rate_Measurement"/>
+  </widget>
+  <action name="action_c_Nicolai_Oswald_2014">
+   <property name="text">
+    <string>(c) Nicolai Oswald 2014</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>Server_IP</tabstop>
+  <tabstop>Server_Port</tabstop>
+  <tabstop>Check_Server_IP</tabstop>
+  <tabstop>udp_pkt_size</tabstop>
+  <tabstop>bottleneck_iteration</tabstop>
+  <tabstop>HP_MODE_en</tabstop>
+  <tabstop>Test_data</tabstop>
+  <tabstop>tmr_iterations</tabstop>
+  <tabstop>tmr_interval</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>Data</tabstop>
+  <tabstop>Send</tabstop>
+  <tabstop>recv_output</tabstop>
+  <tabstop>wrap_arround</tabstop>
+  <tabstop>Console</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>draw_Hist</tabstop>
+  <tabstop>Draw_bitrate</tabstop>
+  <tabstop>Draw_diff</tabstop>
+  <tabstop>Graph_refresh_rate</tabstop>
+  <tabstop>Line_Style</tabstop>
+  <tabstop>color_sel</tabstop>
+  <tabstop>Scatter_Style</tabstop>
+  <tabstop>width_sel</tabstop>
+  <tabstop>Line_Style_2</tabstop>
+  <tabstop>color_sel_2</tabstop>
+  <tabstop>Scatter_Style_2</tabstop>
+  <tabstop>width_sel_2</tabstop>
+  <tabstop>Line_Style_3</tabstop>
+  <tabstop>color_sel_3</tabstop>
+  <tabstop>Scatter_Style_3</tabstop>
+  <tabstop>width_sel_3</tabstop>
+  <tabstop>Line_Style_4</tabstop>
+  <tabstop>color_sel_4</tabstop>
+  <tabstop>Scatter_Style_4</tabstop>
+  <tabstop>width_sel_4</tabstop>
+  <tabstop>Graph_refresh_rate_2</tabstop>
+  <tabstop>Draw_bitrate_2</tabstop>
+  <tabstop>draw_Hist_2</tabstop>
+  <tabstop>Draw_diff_2</tabstop>
+  <tabstop>Line_Style_5</tabstop>
+  <tabstop>color_sel_5</tabstop>
+  <tabstop>Scatter_Style_5</tabstop>
+  <tabstop>width_sel_5</tabstop>
+  <tabstop>Line_Style_6</tabstop>
+  <tabstop>color_sel_6</tabstop>
+  <tabstop>Scatter_Style_6</tabstop>
+  <tabstop>width_sel_6</tabstop>
+  <tabstop>Line_Style_7</tabstop>
+  <tabstop>color_sel_7</tabstop>
+  <tabstop>Scatter_Style_7</tabstop>
+  <tabstop>width_sel_7</tabstop>
+  <tabstop>Line_Style_8</tabstop>
+  <tabstop>color_sel_8</tabstop>
+  <tabstop>Scatter_Style_8</tabstop>
+  <tabstop>width_sel_8</tabstop>
+  <tabstop>g1_histo_res</tabstop>
+  <tabstop>g2_histo_res</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
