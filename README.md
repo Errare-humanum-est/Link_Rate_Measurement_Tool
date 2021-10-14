@@ -5,4 +5,5 @@
 
  # Dependencies
  QT 5.15
+ 
  QCustomPlot 1
