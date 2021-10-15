@@ -3,7 +3,7 @@
 
  Unfortunately the server is no longer reachable (Maybe IP changed or discontinued making the program useless). The connection remains inactive and no proper time out exceptions were implemented by me back then so that when requesting data it causes the program to freeze when trying to communicate with the server.
  
- More information and instructions can be found in the pdf in this repository.
+ More information and instructions can be found in the pdfs in this repository.
 
  # Dependencies
  QT 5.15
